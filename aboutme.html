@@ -1,13 +1,63 @@
-<!doctype html>
-<html lang="en"> 
- <head>
-	    <meta charset="utf-8">
-	    <title>About Me</title>
-	  </head>
-	  <body>
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="aboutme.html">About Me</a>
-    <h1>This is me! (-:</h1>
-	  </body>
-	</html>
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+header {background: lightblue;color:white;}
+footer {background: #aaa;color:grey;}
+.nav {background:#eee;}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.nav ul a {
+    text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+<header>
+  <h1>About Me</h1>
+</header>
+
+<nav class="nav">
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="portfolio.html">Portfolio</a></li>
+  <li><a href="aboutme.html">About Me</a></li>
+</ul>
+</nav>
+
+<article class="article">
+  <h1>Well hello there (-;</h1>
+  <img src="home.jpg" alt="Mountain View" style="width:304px;height:228px;">
+  <p>Yo waddup my name's Britney Monsalvo and I like to party. I'm a junior at Rowland High School! I'm sixteen years old and I really like to eat food so you'll always see me eating 24/7. (-:</p>
+  <p>My friends tell me I'm a fish because they always see me in the pool practicing. I play 2 sports: water polo and swim. I'm a really loud person so don't be alarmed when I'm with my friends being goofy. :-p</p>
+  <p><strong>Follow me on IG: @britneymonsalvo ((((((-:</strong></p>
+</article>
